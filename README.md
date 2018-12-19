@@ -1,2 +1,2 @@
 # ctfbackend
-我的私人仓库
+ctfplatform的后台管理系统
