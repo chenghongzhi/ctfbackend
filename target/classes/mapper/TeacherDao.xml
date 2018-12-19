@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ctfbackend.dao.TeacherDao">
+        <resultMap id="BaseResultMap" type="ctfbackend.bean.Teacher" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="phone" property="phone" jdbcType="BIGINT" />
+        <result column="tname" property="tname" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="img" property="img" jdbcType="VARCHAR" />
+        <result column="qq" property="qq" jdbcType="BIGINT" />
+        <result column="jointime" property="jointime" jdbcType="DATE" />
+    </resultMap>
+
+    <insert id="insertTeacher">
+            insert into teacher(tname, phone, email, img, jointime, qq)
+            values(#{tname},#{phone},#{email},#{img},#{jointime},#{qq})
+    </insert>
+
+    <select id="getAllTeacher" resultMap="BaseResultMap">
+        select * from teacher
+    </select>
+
+    <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from  teacher where id=#{id}
+    </select>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from teacher where id=#{id}
+    </delete>
+
+    <update id="updateByTeacher" parameterType="ctfbackend.bean.Teacher">
+        update teacher
+        <set>
+            <if test="tname!=null">
+                tname=#{tname},
+            </if>
+            <if test="phone!=null">
+                phone=#{phone},
+            </if>
+            <if test="email!=null">
+                email=#{email},
+            </if>
+            <if test="img!=null">
+                img=#{img},
+            </if>
+            <if test="jointime!=null">
+                jointime=#{jointime},
+            </if>
+            <if test="qq!=null">
+                qq=#{qq}
+            </if>
+        </set>
+        <where>
+            <if test="id!=null">
+                id=#{id}
+            </if>
+        </where>
+    </update>
+</mapper>
