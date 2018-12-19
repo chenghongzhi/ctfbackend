@@ -42,7 +42,7 @@ public class AdminController {
     @RequestMapping(value = "/v1/add",method = RequestMethod.POST,produces = {"application/json"})
     public ResultJSON addAdmin( @Valid Admin admin){
         ResultJSON json = new ResultJSON();
-        admin.setDate(new Timestamp(System.currentTimeMillis()));
+        admin.setLastlogin(new Timestamp(System.currentTimeMillis()));
         adminService.addAdmin(admin);
         HashMap<String,Admin> map=new HashMap<>();
         map.put("admininfo",admin);
@@ -69,7 +69,7 @@ public class AdminController {
     @RequestMapping(value = "/v1/update",method = RequestMethod.PUT,produces = {"application/json"})
     public ResultJSON updateAdmin(@Valid Admin admin) {
         ResultJSON json = new ResultJSON();
-        admin.setDate(new Timestamp(System.currentTimeMillis()));
+        admin.setLastlogin(new Timestamp(System.currentTimeMillis()));
         adminService.updateByAdmin(admin);
         HashMap<String,Admin> map=new HashMap<>();
         map.put("admininfo",admin);
@@ -103,6 +103,7 @@ public class AdminController {
             HashMap<String,String> map=new HashMap<>();
             map.put("adminId",Integer.toString(admin.getId()));
             map.put("adminUserName",admin.getUsername());
+            map.put("lastlogin",admin.getLastlogin().toString());
             json.success(map);
         }else {
             json.failure("查找不到该帐号，请输入正确的ID");

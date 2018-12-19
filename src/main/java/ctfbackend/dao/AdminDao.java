@@ -21,6 +21,6 @@ public interface AdminDao {
 
     void updateByAdmin(Admin admin);
 
-    @Select("select username,date from admin limit #{start},#{prePageRecords}")
+    @Select("select username,lastlogin from admin limit #{start},#{prePageRecords}")
     List<Admin> findAdminsByPage(@Param("start") int start, @Param("prePageRecords") int prePageRecords);
 }

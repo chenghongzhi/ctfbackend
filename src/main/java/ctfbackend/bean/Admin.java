@@ -20,7 +20,7 @@ public class Admin implements Serializable {
 
     private String salt;
 
-    private Timestamp date;
+    private Timestamp lastlogin;
 
     public Integer getId() {
         return id;
@@ -54,12 +54,12 @@ public class Admin implements Serializable {
         this.salt = salt;
     }
 
-    public Timestamp getDate() {
-        return date;
+    public Timestamp getLastlogin() {
+        return lastlogin;
     }
 
-    public void setDate(Timestamp date) {
-        this.date = date;
+    public void setLastlogin(Timestamp date) {
+        this.lastlogin = date;
     }
 
     public String getCredentialsSalt() {
