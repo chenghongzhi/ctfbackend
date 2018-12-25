@@ -1,6 +1,7 @@
 package ctfbackend.service.impl;
 
 import ctfbackend.bean.Course;
+import ctfbackend.bean.CourseTemplete;
 import ctfbackend.dao.CourseDao;
 import ctfbackend.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +18,26 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public void addCourse(Course course) {
         courseDao.insertCourse(course);
+        List<CourseTemplete> courseTempletes=course.getCourseTempletes();
+        for(CourseTemplete courseTemplete:courseTempletes){
+            courseDao.insertTemplete(course.getId(),courseTemplete.getId());
+        }
+
     }
 
     @Override
     public void updateByCourse(Course course) {
         courseDao.updateByCourse(course);
+        List<CourseTemplete> courseTempletes=course.getCourseTempletes();
+        for(CourseTemplete courseTemplete:courseTempletes){
+            courseDao.updateTemplete(course.getId(),courseTemplete.getId());
+        }
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         courseDao.deleteById(id);
+        courseDao.deleteTemplete(id);
     }
 
     @Override
@@ -35,7 +46,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Course getById(int id) {
+    public Course getById(Long id) {
         return courseDao.getById(id);
     }
 

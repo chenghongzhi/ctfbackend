@@ -24,12 +24,16 @@
         select * from student
     </select>
 
-    <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select * from  student where id=#{id}
     </select>
 
-    <delete id="deleteById" parameterType="java.lang.Integer">
+    <delete id="deleteById" parameterType="java.lang.Long">
         delete from student where id=#{id}
+    </delete>
+
+    <delete id="deleteReport">
+        delete from report where stu_id=#{stu_id}
     </delete>
 
     <update id="updateByStudent" parameterType="ctfbackend.bean.Student">

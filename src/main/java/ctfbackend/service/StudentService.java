@@ -11,11 +11,11 @@ public interface StudentService {
 
     void updateByStudent(Student student);
 
-    void deleteById(int id);
+    void deleteById(Long id);
 
     List<Student> getAllStudent();
 
-    Student selectById(int id);
+    Student selectById(Long id);
 
     List<Student> findStudentsByPage(int start, int prePageRecords);
 }

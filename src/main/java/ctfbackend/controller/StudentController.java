@@ -53,8 +53,8 @@ public class StudentController {
 
     //更新学生信息
     @ApiOperation(value = "更新学生接口",notes = "将以student对象进行更新",httpMethod = "PUT")
-    @RequestMapping(value = "/v1/update",method = RequestMethod.PUT,produces = {"application/json"})
-    public ResultJSON updateStudent(@RequestBody @Valid Student student) {
+    @RequestMapping(value = "/v1/update/{id}",method = RequestMethod.PUT,produces = {"application/json"})
+    public ResultJSON updateStudent(@RequestBody @Valid Student student,@PathVariable Long id) {
         ResultJSON json = new ResultJSON();
         student.setJointime(new Timestamp(System.currentTimeMillis()));
         studentService.updateByStudent(student);
@@ -67,7 +67,7 @@ public class StudentController {
     //删除学生信息
     @ApiOperation(value = "删除学生接口",notes = "通过学生id来删除学生",httpMethod = "DELETE")
     @RequestMapping(value = "/v1/student/{id}",method = RequestMethod.DELETE,produces = {"application/json"})
-    public ResultJSON delStudent(@PathVariable Integer id) {
+    public ResultJSON delStudent(@PathVariable Long id) {
         ResultJSON json=new ResultJSON();
         Student student=studentService.selectById(id);
         if(student!=null){
@@ -82,7 +82,7 @@ public class StudentController {
     //根据id查找学生
     @ApiOperation(value = "查找学生接口",notes = "通过学生id来查找某个学生",httpMethod = "GET")
     @RequestMapping(value = "/v1/student/{id}",method = RequestMethod.GET,produces = {"application/json"})
-    public ResultJSON getStudentById(@PathVariable int id) {
+    public ResultJSON getStudentById(@PathVariable Long id) {
         ResultJSON json=new ResultJSON();
         Student student=studentService.selectById(id);
         if(student!=null){

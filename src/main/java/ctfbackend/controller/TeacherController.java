@@ -52,8 +52,8 @@ public class TeacherController {
 
     //更新教师信息
     @ApiOperation(value = "更新教师接口",notes = "将以teacher对象进行更新",httpMethod = "PUT")
-    @RequestMapping(value = "/v1/update",method = RequestMethod.PUT,produces = {"application/json"})
-    public ResultJSON updateteacher(@RequestBody @Valid Teacher teacher) {
+    @RequestMapping(value = "/v1/update{id}",method = RequestMethod.PUT,produces = {"application/json"})
+    public ResultJSON updateteacher(@RequestBody @Valid Teacher teacher,@PathVariable Long id) {
         ResultJSON json = new ResultJSON();
         teacher.setJointime(new Timestamp(System.currentTimeMillis()));
         teacherService.updateByTeacher(teacher);
@@ -66,7 +66,7 @@ public class TeacherController {
     //删除教师信息
     @ApiOperation(value = "删除教师接口",notes = "通过教师id来删除教师",httpMethod = "DELETE")
     @RequestMapping(value = "/v1/teacher/{id}",method = RequestMethod.DELETE,produces = {"application/json"})
-    public ResultJSON delTeacher(@PathVariable Integer id) {
+    public ResultJSON delTeacher(@PathVariable Long id) {
         ResultJSON json=new ResultJSON();
         Teacher teacher=teacherService.getById(id);
         if(teacher!=null){
@@ -81,7 +81,7 @@ public class TeacherController {
     //根据id查找教师
     @ApiOperation(value = "查找教师接口",notes = "通过教师id来查找某个教师",httpMethod = "GET")
     @RequestMapping(value = "/v1/teacher/{id}",method = RequestMethod.GET,produces = {"application/json"})
-    public ResultJSON getTeacherById(@PathVariable int id) {
+    public ResultJSON getTeacherById(@PathVariable Long id) {
         ResultJSON json=new ResultJSON();
         Teacher teacher=teacherService.getById(id);
         if(teacher!=null){

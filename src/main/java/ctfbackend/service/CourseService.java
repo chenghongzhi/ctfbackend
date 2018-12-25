@@ -9,11 +9,11 @@ public interface CourseService {
 
     void updateByCourse(Course course);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     List<Course> getAllCourse();
 
-    Course getById(int id);
+    Course getById(Long id);
 
     List<Course> findCoursesByPage(int start, int prePageRecords);
 }

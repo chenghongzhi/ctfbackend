@@ -9,11 +9,11 @@ public interface TeacherService {
 
     void updateByTeacher(Teacher teacher);
 
-    void deleteById(int id);
+    void deleteById(Long id);
 
     List<Teacher> getAllTeacher();
 
-    Teacher getById(int id);
+    Teacher getById(Long id);
 
     List<Teacher> findTeachersByPage(int start, int prePageRecords);
 }

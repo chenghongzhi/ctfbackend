@@ -57,8 +57,8 @@ public class CourseController {
 
     //更新课程信息
     @ApiOperation(value = "更新课程接口",notes = "将以course对象进行更新",httpMethod = "PUT")
-    @RequestMapping(value = "/v1/update",method = RequestMethod.PUT,produces = {"application/json"})
-    public ResultJSON updateCourse(@RequestBody @Valid Course course) {
+    @RequestMapping(value = "/v1/update/{id}",method = RequestMethod.PUT,produces = {"application/json"})
+    public ResultJSON updateCourse(@RequestBody @Valid Course course,@PathVariable Long id) {
         ResultJSON json = new ResultJSON();
         course.setCreatedtime(new Timestamp(System.currentTimeMillis()));
         courseService.updateByCourse(course);
@@ -71,7 +71,7 @@ public class CourseController {
     //删除课程信息
     @ApiOperation(value = "删除课程接口",notes = "通过课程id来删除课程",httpMethod = "DELETE")
     @RequestMapping(value = "/v1/course/{id}",method = RequestMethod.DELETE,produces = {"application/json"})
-    public ResultJSON delCourse(@PathVariable Integer id) {
+    public ResultJSON delCourse(@PathVariable Long id) {
         ResultJSON json=new ResultJSON();
         Course course=courseService.getById(id);
         if(course!=null){
@@ -86,7 +86,7 @@ public class CourseController {
     //根据id查找课程
     @ApiOperation(value = "查找课程接口",notes = "通过课程id来查找某个课程",httpMethod = "GET")
     @RequestMapping(value = "/v1/course/{id}",method = RequestMethod.GET,produces = {"application/json"})
-    public ResultJSON getCourseById(@PathVariable int id) {
+    public ResultJSON getCourseById(@PathVariable Long id) {
         ResultJSON json=new ResultJSON();
         Course course=courseService.getById(id);
         if(course!=null){

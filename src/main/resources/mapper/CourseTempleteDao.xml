@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ctfbackend.dao.CourseTempleteDao">
+
+	<resultMap id="BaseResultMap" type="ctfbackend.bean.CourseTemplete">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="cname" property="cname" jdbcType="VARCHAR" />
+		<result column="createtime" property="createtime" jdbcType="DATE" />
+		<result column="cdescribe" property="cdescribe" jdbcType="VARCHAR" />
+		<result column="img" property="img" jdbcType="VARCHAR" />
+		<result column="createdby" property="createdby" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<resultMap id="base_map" type="ctfbackend.bean.CourseTemplete">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="cname" property="cname" jdbcType="VARCHAR" />
+		<result column="createtime" property="createtime" jdbcType="DATE" />
+		<result column="cdescribe" property="cdescribe" jdbcType="VARCHAR" />
+		<result column="img" property="img" jdbcType="VARCHAR" />
+		<result column="createdby" property="createdby" jdbcType="VARCHAR" />
+		<collection property="imagelocals" ofType="ctfbackend.bean.Imagelocal"
+			columnPrefix="img_">
+			<id column="id" property="id" jdbcType="BIGINT" />
+			<result column="iname" property="iname" jdbcType="VARCHAR" />
+			<result column="size" property="size" jdbcType="VARCHAR" />
+			<result column="ports" property="ports" jdbcType="VARCHAR" />
+			<result column="createdtime" property="createdtime" jdbcType="TIMESTAMP" />
+			<result column="idescribe" property="idescribe" jdbcType="VARCHAR" />
+			<result column="imageid" property="imageid" jdbcType="VARCHAR" />
+		</collection>
+	</resultMap>
+
+	<delete id="deleteById" parameterType="java.lang.Long">
+		delete from coursetemplete
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+
+	<insert id="insertCourseTemplete" parameterType="ctfbackend.bean.CourseTemplete"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into coursetemplete (cname, createtime, cdescribe,
+		img, createdby)
+		values (#{cname,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE},
+		#{cdescribe,jdbcType=VARCHAR},
+		#{img,jdbcType=VARCHAR}, #{createdby,jdbcType=VARCHAR})
+	</insert>
+
+	<insert id="insertTmp_img">
+		insert into tmp_img (tmp_id,img_id) values (#{tmp_id},#{img_id})
+	</insert>
+	
+	<insert id="deleteTmp_img">
+		delete from tmp_img where tmp_id = #{tmp_id,jdbcType=BIGINT}
+	</insert>
+
+	<update id="updateTmp_img">
+		update tmp_img set img_id=#{img_id} where tmp_id=#{tmp_id}
+	</update>
+	<update id="updateByCourseTemplete" parameterType="ctfbackend.bean.CourseTemplete">
+		update coursetemplete
+		set cname = #{cname,jdbcType=VARCHAR},
+		createtime = #{createtime,jdbcType=DATE},
+		cdescribe = #{cdescribe,jdbcType=VARCHAR},
+		img = #{img,jdbcType=VARCHAR},
+		createdby = #{createdby,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+
+	<select id="getById" resultMap="base_map" parameterType="java.lang.Long">
+		select c.id, c.cname, c.createtime, c.cdescribe, c.img,
+		c.createdby,i.id as img_id ,i.iname as img_iname,i.size as
+		img_size,i.ports as img_ports,i.createdtime as
+		img_createdtime,i.idescribe as img_idescribe,i.imageid as img_imageid
+		from coursetemplete c LEFT JOIN tmp_img m on m.tmp_id = c.id LEFT
+		JOIN imagelocal i on m.img_id=i.id where c.id = #{id,jdbcType=BIGINT}
+	</select>
+
+	<select id="getAllCourseTemplete" resultMap="base_map">
+		select c.id, c.cname, c.createtime, c.cdescribe, c.img,
+		c.createdby,i.id as img_id ,i.iname as img_name,i.size as
+		img_size,i.ports as img_ports,i.createdtime as
+		img_createdtime,i.idescribe as img_idescribe,i.imageid as img_imageid
+		from coursetemplete c LEFT JOIN tmp_img m on m.tmp_id = c.id LEFT
+		JOIN imagelocal i on m.img_id=i.id
+	</select>
+
+	<select id="findCourseTempletesByPage" resultMap="base_map">
+		select c.id, c.cname, c.createtime, c.cdescribe, c.img,
+		c.createdby,i.id as img_id ,i.iname as img_name,i.size as
+		img_size,i.ports as img_ports,i.createdtime as
+		img_createdtime,i.idescribe as img_idescribe,i.imageid as img_imageid
+		from coursetemplete c LEFT JOIN tmp_img m on m.tmp_id = c.id LEFT
+		JOIN imagelocal i on m.img_id=i.id LIMIT #{start},#{prePageRecords}
+	</select>
+</mapper>

@@ -12,11 +12,13 @@ public interface StudentDao {
 
     List<Student> getAllStudent();
 
-    Student getById(int id);
+    Student getById(Long id);
 
-    int deleteById(Integer id);
+    void deleteById(Long id);
 
-    int updateByStudent(Student student);
+    void deleteReport(@Param("stu_id") Long stu_id);
+
+    void updateByStudent(Student student);
 
     @Select("select * from student limit #{start},#{prePageRecords}")
     List<Student> findStudentsByPage(@Param("start") int start, @Param("prePageRecords") int prePageRecords);

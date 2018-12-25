@@ -1,6 +1,8 @@
 package ctfbackend.service;
 
 import ctfbackend.bean.Admin;
+import ctfbackend.bean.Admins;
+
 import java.util.List;
 
 public interface AdminService {
@@ -16,5 +18,5 @@ public interface AdminService {
 
     Admin getByUserName(String username);
 
-    List<Admin> findAdminsByPage(int start,int prePageRecords);
+    List<Admins> findAdminsByPage(int start, int prePageRecords);
 }

@@ -1,12 +1,10 @@
 package ctfbackend.bean;
 
-import lombok.Data;
 import lombok.ToString;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.util.Date;
 
 
 @ToString
@@ -25,7 +23,7 @@ public class Student {
 
     private String location;
 
-    private Timestamp jointime;
+    private Date jointime;
     @NotEmpty(message = "姓名不能为空")
     private String realname;
 
@@ -85,11 +83,11 @@ public class Student {
         this.location = location;
     }
 
-    public Timestamp getJointime() {
+    public Date getJointime() {
         return jointime;
     }
 
-    public void setJointime(Timestamp jointime) {
+    public void setJointime(Date jointime) {
         this.jointime = jointime;
     }
 

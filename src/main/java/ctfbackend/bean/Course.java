@@ -18,7 +18,7 @@ public class Course {
     @NotNull(message = "人数不能为空")
     private Integer count;
 
-    private Timestamp createdtime;
+    private Date createdtime;
     @NotNull(message = "state不能为空")
     private Integer state;
 
@@ -64,11 +64,11 @@ public class Course {
         this.count = count;
     }
 
-    public Timestamp getCreatedtime() {
+    public Date getCreatedtime() {
         return createdtime;
     }
 
-    public void setCreatedtime(Timestamp createdtime) {
+    public void setCreatedtime(Date createdtime) {
         this.createdtime = createdtime;
     }
 

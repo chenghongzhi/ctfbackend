@@ -1,6 +1,7 @@
 package ctfbackend.service.impl;
 
 import ctfbackend.bean.Admin;
+import ctfbackend.bean.Admins;
 import ctfbackend.dao.AdminDao;
 import ctfbackend.service.AdminService;
 import ctfbackend.util.PasswordHelper;
@@ -85,7 +86,7 @@ public class AdminServiceImpl implements AdminService {
      * @return
      */
     @Override
-    public List<Admin> findAdminsByPage(int start, int prePageRecords) {
+    public List<Admins> findAdminsByPage(int start, int prePageRecords) {
         return adminDao.findAdminsByPage(start,prePageRecords);
     }
 }

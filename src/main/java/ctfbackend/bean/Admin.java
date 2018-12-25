@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @ToString
 public class Admin implements Serializable {
@@ -20,7 +20,7 @@ public class Admin implements Serializable {
 
     private String salt;
 
-    private Timestamp lastlogin;
+    private Date lastlogin;
 
     public Integer getId() {
         return id;
@@ -54,11 +54,11 @@ public class Admin implements Serializable {
         this.salt = salt;
     }
 
-    public Timestamp getLastlogin() {
+    public Date getLastlogin() {
         return lastlogin;
     }
 
-    public void setLastlogin(Timestamp date) {
+    public void setLastlogin(Date date) {
         this.lastlogin = date;
     }
 

@@ -12,11 +12,17 @@ public interface CourseDao {
 
     List<Course> getAllCourse();
 
-    Course getById(int id);
+    Course getById(Long id);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     void updateByCourse(Course course);
+
+    void insertTemplete(@Param("courseId") Long courseId, @Param("templeteId") Long templeteId);
+
+    void deleteTemplete(Long courseId);
+
+    void updateTemplete(@Param("courseId") Long courseId, @Param("templeteId") Long templeteId);
 
     List<Course> findCoursesByPage(@Param("start") int start, @Param("prePageRecords") int prePageRecords);
 }

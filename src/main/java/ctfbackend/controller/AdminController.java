@@ -1,6 +1,7 @@
 package ctfbackend.controller;
 
 import ctfbackend.bean.Admin;
+import ctfbackend.bean.Admins;
 import ctfbackend.service.AdminService;
 import ctfbackend.util.MD5Util;
 import ctfbackend.util.Page;
@@ -40,12 +41,14 @@ public class AdminController {
     //添加帐号
     @ApiOperation(value = "添加管理员接口",notes = "根据admin对象添加账户",httpMethod = "POST")
     @RequestMapping(value = "/v1/add",method = RequestMethod.POST,produces = {"application/json"})
-    public ResultJSON addAdmin( @Valid Admin admin){
+    public ResultJSON addAdmin(@RequestBody @Valid Admin admin){
         ResultJSON json = new ResultJSON();
         admin.setLastlogin(new Timestamp(System.currentTimeMillis()));
         adminService.addAdmin(admin);
-        HashMap<String,Admin> map=new HashMap<>();
-        map.put("admininfo",admin);
+        HashMap<String,String> map=new HashMap<>();
+//        map.put("adminId",admin.getId().toString());
+        map.put("adminName",admin.getUsername());
+        map.put("lastlogin",admin.getLastlogin().toString());
         json.success(map);
         return json;
     }
@@ -57,8 +60,8 @@ public class AdminController {
         ResultJSON json = new ResultJSON();
         page.setTotalUsers(adminService.getAllAdmin().size());
         page.setCurrentPage(pages);
-        List<Admin> adminList =adminService.findAdminsByPage((pages-1)*page.getPageSize(),page.getPageSize());
-        HashMap<String,List<Admin>> map = new HashMap<>();
+        List<Admins> adminList =adminService.findAdminsByPage((pages-1)*page.getPageSize(),page.getPageSize());
+        HashMap<String,List<Admins>> map = new HashMap<>();
         map.put("pageResult",adminList);
         json.success(map);
         return json;
@@ -66,13 +69,15 @@ public class AdminController {
 
     //更新帐号信息
     @ApiOperation(value = "更新管理员账户接口",notes = "将以admin对象进行更新",httpMethod = "PUT")
-    @RequestMapping(value = "/v1/update",method = RequestMethod.PUT,produces = {"application/json"})
-    public ResultJSON updateAdmin(@Valid Admin admin) {
+    @RequestMapping(value = "/v1/update/{id}",method = RequestMethod.PUT,produces = {"application/json"})
+    public ResultJSON updateAdmin(@RequestBody @Valid Admin admin,@PathVariable Long id) {
         ResultJSON json = new ResultJSON();
         admin.setLastlogin(new Timestamp(System.currentTimeMillis()));
         adminService.updateByAdmin(admin);
-        HashMap<String,Admin> map=new HashMap<>();
-        map.put("admininfo",admin);
+        HashMap<String,String> map=new HashMap<>();
+        map.put("adminId",admin.getId().toString());
+        map.put("adminName",admin.getUsername());
+        map.put("lastlogin",admin.getLastlogin().toString());
         json.success(map);
         return json;
     }

@@ -13,7 +13,7 @@
 
     <insert id="insertAdmin">
             insert into admin(username,password,salt,lastlogin)
-            values(#{username},#{password},#{salt},#{date})
+            values(#{username},#{password},#{salt},#{lastlogin})
     </insert>
 
     <select id="getAllAdmin" resultMap="BaseResultMap">
@@ -23,8 +23,6 @@
     <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select id,username,lastlogin from  admin where id=#{id}
     </select>
-
-
 
     <delete id="deleteById" parameterType="java.lang.Integer">
         delete from admin where id=#{id}

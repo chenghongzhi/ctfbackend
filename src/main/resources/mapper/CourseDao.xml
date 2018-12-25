@@ -83,9 +83,22 @@
 		where c.id=#{id}
     </select>
 
-    <delete id="deleteById" parameterType="java.lang.Integer">
+    <delete id="deleteById" parameterType="java.lang.Long">
         delete from course where id=#{id}
     </delete>
+
+    <insert id="insertTemplete">
+       insert into course_templete (courseId,templeteId) VALUES (#{courseId},#{templeteId})
+    </insert>
+
+    <delete id="deleteTemplete">
+     delete from course_templete
+		where courseId = #{courseId,jdbcType=BIGINT}
+    </delete>
+
+    <update id="updateTemplete">
+        update course_templete set templeteId=#{templeteId} where courseId=#{courseId}
+    </update>
 
     <update id="updateByCourse" parameterType="ctfbackend.bean.Course">
         update course

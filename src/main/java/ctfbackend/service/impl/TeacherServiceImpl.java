@@ -24,8 +24,9 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public void deleteById(int id) {
+    public void deleteById(Long id) {
         teacherDao.deleteById(id);
+        teacherDao.deleteCourse(id);
     }
 
     @Override
@@ -39,7 +40,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher getById(int id) {
+    public Teacher getById(Long id) {
         return teacherDao.getById(id);
     }
 }

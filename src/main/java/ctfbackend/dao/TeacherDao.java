@@ -12,9 +12,11 @@ public interface TeacherDao {
 
     List<Teacher> getAllTeacher();
 
-    Teacher getById(int id);
+    Teacher getById(Long id);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
+
+    void deleteCourse(@Param("tch_id") Long tch_id);
 
     void updateByTeacher(Teacher teacher);
 
