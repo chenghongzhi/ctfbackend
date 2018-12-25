@@ -7,94 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f556ba6-33f6-42aa-a266-5daf98a27ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Admins.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/CourseTempleteDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/CourseTemplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/CourseTemplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Imagelocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Imagelocal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/bean/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/dao/TeacherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ctfbackend/service/impl/TeacherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AdminDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AdminDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CourseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CourseDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TeacherDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeacherDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-shiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-shiro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/bean/CourseTemplete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/bean/CourseTemplete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Imagelocal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Imagelocal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/bean/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/controller/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/dao/AdminDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/dao/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/dao/CourseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/dao/TeacherDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/dao/TeacherDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/CourseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/service/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctfbackend/util/ListData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ctfbackend/util/ListData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AdminDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AdminDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CourseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CourseDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TeacherDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TeacherDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-shiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-shiro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/CourseTemplete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/CourseTemplete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Imagelocal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Imagelocal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/bean/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/AdminDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/CourseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/TeacherDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/dao/TeacherDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/CourseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/service/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/util/ListData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/ctfbackend/util/ListData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/AdminDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/AdminDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/CourseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/CourseDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/StudentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/TeacherDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/mapper/TeacherDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-shiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-shiro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ctfplatform-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,6 +54,7 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.37" value="1" />
@@ -156,7 +70,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -226,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/controller/CourseController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -234,7 +148,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/bean/Admin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="145">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -484,21 +398,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ctfbackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctfbackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctfbackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctfbackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -511,15 +410,15 @@
     <property name="SearchEverywhereHistoryKey" value="securityManager&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/SecurityManager.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545710640851" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545714761889" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../swagger2-springmvc-example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.453997" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JSP" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -670,6 +569,7 @@
       <workItem from="1545703559553" duration="787000" />
       <workItem from="1545705727223" duration="4914000" />
       <workItem from="1545711399938" duration="1122000" />
+      <workItem from="1545713428356" duration="1095000" />
     </task>
     <servers />
   </component>
@@ -679,12 +579,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147849000" />
+    <option name="totallyTimeSpent" value="148944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.21606787" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.21806388" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.21380697" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1094,27 +994,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/bean/Admin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/controller/CourseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ctfbackend/bean/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
+        <state relative-caret-position="145">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

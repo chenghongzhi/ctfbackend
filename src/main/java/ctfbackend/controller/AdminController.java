@@ -46,7 +46,6 @@ public class AdminController {
         admin.setLastlogin(new Timestamp(System.currentTimeMillis()));
         adminService.addAdmin(admin);
         HashMap<String,String> map=new HashMap<>();
-//        map.put("adminId",admin.getId().toString());
         map.put("adminName",admin.getUsername());
         map.put("lastlogin",admin.getLastlogin().toString());
         json.success(map);
