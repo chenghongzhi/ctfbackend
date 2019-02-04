@@ -73,4 +73,6 @@
         </property>
     </bean>
 
+    <!-- 解决跨域问题 -->
+    <bean class="ctfbackend.util.WebConfig"/>
 </beans>

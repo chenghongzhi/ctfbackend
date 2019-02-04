@@ -4,7 +4,7 @@ public class Page {
     private int currentPage=1;    //当前页数
     private int totalPages;       //总页数
     private int totalUsers;            //记录总行数
-    private int pageSize=5;    //每页记录行数
+    private int pageSize=10;    //每页记录行数
     private int nextPage;        //下一页
     private int prefPage;       //前一页
 

@@ -49,6 +49,7 @@ public class CourseController {
         page.setTotalUsers(courseService.getAllCourse().size());
         page.setCurrentPage(pages);
         List<Course> courseList =courseService.findCoursesByPage((pages-1)*page.getPageSize(),page.getPageSize());
+//        System.out.println((pages-1)*page.getPageSize()+"----"+page.getPageSize());
         HashMap<String,List<Course>> map = new HashMap<>();
         map.put("pageResult",courseList);
         json.success(map);

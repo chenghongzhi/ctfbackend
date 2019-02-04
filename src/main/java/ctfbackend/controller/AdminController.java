@@ -60,6 +60,7 @@ public class AdminController {
         page.setTotalUsers(adminService.getAllAdmin().size());
         page.setCurrentPage(pages);
         List<Admins> adminList =adminService.findAdminsByPage((pages-1)*page.getPageSize(),page.getPageSize());
+//        System.out.println((pages-1)*page.getPageSize()+"----"+page.getPageSize());
         HashMap<String,List<Admins>> map = new HashMap<>();
         map.put("pageResult",adminList);
         json.success(map);
@@ -116,11 +117,12 @@ public class AdminController {
     }
     //登录
     @ApiOperation(value = "登录接口",notes = "根据用户名密码判断登录",httpMethod = "POST")
-    @RequestMapping(value = "/v1/login",method = RequestMethod.POST,produces = {"application/json"})
-    public ResultJSON login(@RequestParam("username")String username,@RequestParam("password")String password){
+    @RequestMapping(value = "/v1/login",method = RequestMethod.POST)
+    public ResultJSON login(@RequestParam("username") String username, @RequestParam("password") String password ){
         ResultJSON json=new ResultJSON();
         Subject subject= SecurityUtils.getSubject();
-        //判断用户是否已经登录
+//        //判断用户是否已经登录
+        System.out.println("username:"+username+"password:"+password);
         if(!subject.isAuthenticated()){
             UsernamePasswordToken token=new UsernamePasswordToken(username,password);
             try{
@@ -138,8 +140,21 @@ public class AdminController {
                 e.printStackTrace();
                 log.error(username+"用户 Exception------"+e);
             }
+        }else{
+            json.failure("不能重复登录");
+            log.info("不能重复登录");
         }
         log.info("用户返回 "+json.getData()+"");
+        return json;
+    }
+
+    @ApiOperation(value = "登出接口", notes = "登出用户，清空服务器session", httpMethod = "GET")
+    @RequestMapping(value = "/v1/logout", method = RequestMethod.GET)
+    public ResultJSON logout() {
+        ResultJSON json = new ResultJSON();
+        if (UserContext.getCurrent()==null) {
+            json.success("用户退出成功");
+        }
         return json;
     }
 

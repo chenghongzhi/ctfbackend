@@ -48,9 +48,9 @@
 		insert into tmp_img (tmp_id,img_id) values (#{tmp_id},#{img_id})
 	</insert>
 	
-	<insert id="deleteTmp_img">
+	<delete id="deleteTmp_img">
 		delete from tmp_img where tmp_id = #{tmp_id,jdbcType=BIGINT}
-	</insert>
+	</delete>
 
 	<update id="updateTmp_img">
 		update tmp_img set img_id=#{img_id} where tmp_id=#{tmp_id}
