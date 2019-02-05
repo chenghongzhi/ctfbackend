@@ -122,7 +122,6 @@ public class AdminController {
         ResultJSON json=new ResultJSON();
         Subject subject= SecurityUtils.getSubject();
 //        //判断用户是否已经登录
-        System.out.println("username:"+username+"password:"+password);
         if(!subject.isAuthenticated()){
             UsernamePasswordToken token=new UsernamePasswordToken(username,password);
             try{

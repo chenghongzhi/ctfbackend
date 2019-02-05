@@ -4,6 +4,7 @@ import ctfbackend.bean.CourseTemplete;
 import ctfbackend.service.CourseTempleteService;
 import ctfbackend.util.Page;
 import ctfbackend.util.ResultJSON;
+import ctfbackend.util.UserContext;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class CourseTempleteController {
         ResultJSON json = new ResultJSON();
         if(courseTemplete!=null){
             courseTemplete.setCreatetime(new Timestamp(System.currentTimeMillis()));
+            courseTemplete.setCreatedby(UserContext.getCurrent());
             courseTempleteService.addCourseTemplete(courseTemplete);
             HashMap<String,CourseTemplete> map=new HashMap<>();
             map.put("courseinfo",courseTemplete);
@@ -48,6 +50,7 @@ public class CourseTempleteController {
         ResultJSON json = new ResultJSON();
         page.setTotalUsers(courseTempleteService.getAllCourseTemplete().size());
         page.setCurrentPage(pages);
+//        System.out.println("当前用户为"+UserContext.getCurrent());
         List<CourseTemplete> courseTempleteList =courseTempleteService.findCourseTempletesByPage((pages-1)*page.getPageSize(),page.getPageSize());
         HashMap<String,List<CourseTemplete>> map = new HashMap<>();
         map.put("pageResult",courseTempleteList);
@@ -60,6 +63,7 @@ public class CourseTempleteController {
     public ResultJSON updateCourse(@RequestBody @Valid CourseTemplete courseTemplete,@PathVariable Long id) {
         ResultJSON json = new ResultJSON();
         courseTemplete.setCreatetime(new Timestamp(System.currentTimeMillis()));
+        courseTemplete.setCreatedby(UserContext.getCurrent());
         courseTempleteService.updateByCourseTemplete(courseTemplete);
         HashMap<String,CourseTemplete> map=new HashMap<>();
         map.put("courseTempleteinfo",courseTemplete);
