@@ -31,7 +31,6 @@ public class CourseController {
         if(course!=null){
             course.setCreatedtime(new Timestamp(System.currentTimeMillis()));
             courseService.addCourse(course);
-            System.out.println(course.toString());
             HashMap<String,Course> map=new HashMap<>();
             map.put("courseinfo",course);
             json.success(map);
@@ -49,8 +48,8 @@ public class CourseController {
         page.setTotalUsers(courseService.getAllCourse().size());
         page.setCurrentPage(pages);
         List<Course> courseList =courseService.findCoursesByPage((pages-1)*page.getPageSize(),page.getPageSize());
-//        System.out.println((pages-1)*page.getPageSize()+"----"+page.getPageSize());
-        HashMap<String,List<Course>> map = new HashMap<>();
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("totalPages",page.getTotalPages());
         map.put("pageResult",courseList);
         json.success(map);
         return json;
@@ -95,7 +94,7 @@ public class CourseController {
             map.put("courseinfo",course);
             json.success(map);
         }else{
-            json.failure("查找不到该学生，请输入正确的ID");
+            json.failure("查找不到该课程，请输入正确的ID");
         }
         return json;
     }

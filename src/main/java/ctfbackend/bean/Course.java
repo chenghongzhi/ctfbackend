@@ -1,5 +1,6 @@
 package ctfbackend.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -17,7 +18,6 @@ public class Course {
     private Long tch_Id;
     @NotNull(message = "人数不能为空")
     private Integer count;
-
     private Date createdtime;
     @NotNull(message = "state不能为空")
     private Integer state;

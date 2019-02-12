@@ -1,5 +1,6 @@
 package ctfbackend.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -22,7 +23,6 @@ public class Student {
     private String tdescribe;
 
     private String location;
-
     private Date jointime;
     @NotEmpty(message = "姓名不能为空")
     private String realname;

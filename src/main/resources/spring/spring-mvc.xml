@@ -20,6 +20,17 @@
 
     <!-- 启动基于注解的HandlerMapping,可以将请求参数绑定到控制器参数 -->
     <mvc:annotation-driven/>
+    <!--<mvc:annotation-driven >-->
+        <!--&lt;!&ndash; json格式转换 &ndash;&gt;-->
+        <!--<mvc:message-converters>-->
+            <!--<bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+                <!--<property name="supportedMediaTypes">-->
+                    <!--<list><value>application/json;charset=utf-8</value></list>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</mvc:message-converters>-->
+    <!--</mvc:annotation-driven>-->
+
 
     <mvc:default-servlet-handler />
 </beans>

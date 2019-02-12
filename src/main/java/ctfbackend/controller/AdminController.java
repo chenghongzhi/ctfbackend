@@ -60,9 +60,10 @@ public class AdminController {
         page.setTotalUsers(adminService.getAllAdmin().size());
         page.setCurrentPage(pages);
         List<Admins> adminList =adminService.findAdminsByPage((pages-1)*page.getPageSize(),page.getPageSize());
-//        System.out.println((pages-1)*page.getPageSize()+"----"+page.getPageSize());
-        HashMap<String,List<Admins>> map = new HashMap<>();
+        HashMap<String,Object> map = new HashMap<>();
+//        HashMap<String,List<Admins>> map = new HashMap<>();
         map.put("pageResult",adminList);
+        map.put("totalPages",page.getTotalPages());
         json.success(map);
         return json;
     }

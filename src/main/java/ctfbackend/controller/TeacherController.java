@@ -44,7 +44,8 @@ public class TeacherController {
         page.setTotalUsers(teacherService.getAllTeacher().size());
         page.setCurrentPage(pages);
         List<Teacher> teacherList =teacherService.findTeachersByPage((pages-1)*page.getPageSize(),page.getPageSize());
-        HashMap<String,List<Teacher>> map = new HashMap<>();
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("totalPages",page.getTotalPages());
         map.put("pageResult",teacherList);
         json.success(map);
         return json;

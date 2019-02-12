@@ -1,5 +1,6 @@
 package ctfbackend.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -11,9 +12,11 @@ import java.util.Date;
 public class Admin implements Serializable {
 
     private Integer id;
+
     @NotEmpty(message = "用户名不能为空")
     @Length(min = 6, max = 12, message ="用户名应该在6-12长度之间")
     private String username;
+
     @NotEmpty(message = "密码不能为空")
     @Length(min = 6, max = 16, message = "密码长度应该在6-16长度之间")
     private String password;

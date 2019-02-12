@@ -1,5 +1,6 @@
 package ctfbackend.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -14,7 +15,6 @@ public class Teacher {
     private String email;
 
     private String img;
-
     private Date jointime;
 
     private Long qq;

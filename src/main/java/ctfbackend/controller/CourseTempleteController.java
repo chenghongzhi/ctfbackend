@@ -52,7 +52,8 @@ public class CourseTempleteController {
         page.setCurrentPage(pages);
 //        System.out.println("当前用户为"+UserContext.getCurrent());
         List<CourseTemplete> courseTempleteList =courseTempleteService.findCourseTempletesByPage((pages-1)*page.getPageSize(),page.getPageSize());
-        HashMap<String,List<CourseTemplete>> map = new HashMap<>();
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("totalPages",page.getTotalPages());
         map.put("pageResult",courseTempleteList);
         json.success(map);
         return json;

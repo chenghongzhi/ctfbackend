@@ -1,5 +1,6 @@
 package ctfbackend.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -12,7 +13,6 @@ public class Imagelocal {
     private String size;
 
     private String ports;
-
     private Date createdtime;
 
     private String idescribe;

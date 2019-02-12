@@ -1,5 +1,6 @@
 package ctfbackend.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,7 +10,6 @@ public class CourseTemplete {
     private Long id;
 
     private String cname;
-
     private Date createtime;
 
     private String cdescribe;
