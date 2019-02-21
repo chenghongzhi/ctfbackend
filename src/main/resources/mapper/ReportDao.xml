@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ctfbackend.dao.ReportDao">
+
+	<resultMap id="BaseResultMap" type="ctfbackend.bean.Report">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="tmp_id" property="tmpId" jdbcType="BIGINT" />
+		<result column="stu_id" property="stuId" jdbcType="BIGINT" />
+		<result column="tch_id" property="tchId" jdbcType="BIGINT" />
+		<result column="cou_id" property="courseId" jdbcType="BIGINT" />
+		<result column="grade" property="grade" jdbcType="VARCHAR" />
+		<result column="createdtime" property="createdtime" jdbcType="TIMESTAMP" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="cname" property="content" jdbcType="VARCHAR" />
+		<result column="sname" property="sname" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="base_map" type="ctfbackend.bean.Report">
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="tmp_id" property="tmpId" jdbcType="BIGINT" />
+        <result column="stu_id" property="stuId" jdbcType="BIGINT" />
+		<result column="tch_id" property="tchId" jdbcType="BIGINT" />
+        <result column="cou_id" property="courseId" jdbcType="BIGINT" />
+        <result column="grade" property="grade" jdbcType="VARCHAR" />
+        <result column="createdtime" property="createdtime" jdbcType="TIMESTAMP" />
+        <result column="remark" property="remark" jdbcType="VARCHAR" />
+        <result column="content" property="content"/>
+        <result column="cname" property="cname" jdbcType="VARCHAR" />
+        <result column="sname" property="sname" jdbcType="VARCHAR" />
+		<association property="courseTemplete" javaType="ctfbackend.bean.CourseTemplete"
+			columnPrefix="couTem_">
+			<id column="id" property="id" jdbcType="BIGINT" />
+			<result column="cname" property="cname" jdbcType="VARCHAR" />
+		</association>
+	</resultMap>
+
+	<delete id="deleteById" parameterType="java.lang.Long">
+		delete from report
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+
+	<insert id="insertReport" parameterType="ctfbackend.bean.Report"
+			useGeneratedKeys="true" keyProperty="id">
+		insert into report (tmp_id, stu_id, grade,sname,
+		createdtime, remark,content,cname,tch_id,cou_id)
+		values (#{tmpId,jdbcType=BIGINT}, #{stuId,jdbcType=BIGINT},
+		#{grade,jdbcType=VARCHAR},#{sname,jdbcType=VARCHAR},
+		#{createdtime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}
+		,#{content,jdbcType=VARCHAR},#{cname,jdbcType=VARCHAR},#{tchId,jdbcType=BIGINT},#{courseId,jdbcType=BIGINT})
+	</insert>
+
+	<update id="updateByReport" parameterType="ctfbackend.bean.Report">
+
+		update report
+		<set>tmp_id = #{tmpId,jdbcType=BIGINT},
+		stu_id = #{stuId,jdbcType=BIGINT},
+		tch_id = #{tchId,jdbcType=BIGINT},
+		createdtime = #{createdtime,jdbcType=TIMESTAMP},
+		<if test="grade!=null">
+			grade =#{grade,jdbcType=VARCHAR},
+		</if>
+		<if test="remark!=null">
+			remark = #{remark,jdbcType=VARCHAR},
+		</if>
+		<if test="content!=null">
+			content=#{content,jdbcType=VARCHAR},
+		</if>
+            cname=#{cname,jdbcType=VARCHAR}
+        </set>
+		<where>
+        id = #{id,jdbcType=BIGINT}
+        </where>
+	</update>
+
+	<select id="getById" resultMap="base_map"
+		parameterType="java.lang.Long">
+		select r.id,r.cname,r.sname,r.tmp_id, r.stu_id,r.tch_id, r.grade, r.createdtime, r.remark,r.content,r.cou_id, c.id as
+		couTem_id, c.cname as couTem_cname
+		from report r LEFT JOIN coursetemplete c on c.id=r.tmp_id where r.id = #{id,jdbcType=BIGINT}
+	</select>
+
+	<select id="selectByStuId" resultMap="base_map"
+		parameterType="java.lang.Long">
+		select r.id, r.cou_id, r.stu_id,r.tch_id, r.grade, r.createdtime, r.remark, c.id as
+		cou_id, c.cname as cou_cname,c.tmp_id as cou_tmp_id ,c.count as
+		cou_count ,c.state as cou_state
+		,s.id as stu_id ,s.number as stu_number ,s.realname as stu_realname
+		from report r LEFT JOIN course c on c.id=r.cou_id LEFT JOIN student s
+		on s.id=r.stu_id where r.stu_id = #{stu_id,jdbcType=BIGINT}
+	</select>
+
+	<select id="getAllReport" resultMap="base_map">
+		select r.id,r.cname,r.sname,r.tmp_id, r.stu_id,r.tch_id, r.grade, r.createdtime, r.remark,r.content,r.cou_id, c.id as
+		couTem_id, c.cname as couTem_cname
+		from report r LEFT JOIN coursetemplete c on c.id=r.tmp_id
+	</select>
+
+    <select id="selectByStuIdToPage" resultMap="base_map">
+		select r.id,r.cname,r.sname,r.tmp_id, r.stu_id,r.tch_id, r.grade, r.createdtime, r.remark,r.content,r.cou_id, c.id as
+		couTem_id, c.cname as couTem_cname
+		from report r LEFT JOIN coursetemplete c on c.id=r.tmp_id WHERE r.stu_id =#{stuId} ORDER BY r.createdtime desc LIMIT #{beginIndex},#{pageSize}
+	</select>
+
+    <select id="selectByTmpIdToPage" resultMap="base_map">
+		select r.id,r.cname,r.sname,r.tmp_id,r.stu_id,r.tch_id,r.grade,r.createdtime,r.remark,r.content,r.cou_id, c.id as
+		couTem_id, c.cname as couTem_cname
+		from report r LEFT JOIN coursetemplete c on c.id=r.tmp_id WHERE r.tmp_id =#{tmpId} and r.cou_id =#{couId} LIMIT #{beginIndex},#{pageSize}
+	</select>
+	<select id="selectByPage" resultMap="base_map">
+		select r.id,r.cname,r.sname,r.tmp_id,r.stu_id,r.tch_id,r.grade,r.createdtime,r.remark,r.content,r.cou_id, c.id as
+		couTem_id, c.cname as couTem_cname
+		from report r LEFT JOIN coursetemplete c on c.id=r.tmp_id LIMIT #{beginIndex},#{pageSize}
+	</select>
+
+</mapper>
