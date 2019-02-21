@@ -21,5 +21,6 @@
     <!-- 启动基于注解的HandlerMapping,可以将请求参数绑定到控制器参数 -->
     <mvc:annotation-driven/>
 
+
     <mvc:default-servlet-handler />
 </beans>

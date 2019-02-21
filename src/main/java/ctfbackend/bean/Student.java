@@ -23,7 +23,10 @@ public class Student {
     private String tdescribe;
 
     private String location;
+
+//    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Date jointime;
+
     @NotEmpty(message = "姓名不能为空")
     private String realname;
 

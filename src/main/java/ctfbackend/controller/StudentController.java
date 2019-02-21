@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TimeZone;
+
 @Api(value = "/student", tags = "学生相关接口")
 @RestController
 @RequestMapping(value = "/student")
@@ -29,8 +33,9 @@ public class StudentController {
     @RequestMapping(value = "/v1/add",method = RequestMethod.POST,produces = {"application/json"})
     public ResultJSON addStudent(@RequestBody @Valid Student student){
         ResultJSON json = new ResultJSON();
-        student.setJointime(new Timestamp(System.currentTimeMillis()));
+//        student.setJointime(new Timestamp(System.currentTimeMillis()));
         studentService.addStudent(student);
+        System.out.println(student.toString());
         HashMap<String,Student> map=new HashMap<>();
         map.put("studentinfo",student);
         json.success(map);
