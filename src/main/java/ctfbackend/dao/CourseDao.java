@@ -2,7 +2,6 @@ package ctfbackend.dao;
 
 import ctfbackend.bean.Course;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
