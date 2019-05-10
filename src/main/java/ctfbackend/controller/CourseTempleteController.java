@@ -32,7 +32,7 @@ public class CourseTempleteController {
         ResultJSON json = new ResultJSON();
         if(courseTemplete!=null){
             courseTemplete.setCreatetime(new Timestamp(System.currentTimeMillis()));
-            courseTemplete.setCreatedby(UserContext.getCurrent());
+//            courseTemplete.setCreatedby(UserContext.getCurrent());
             courseTempleteService.addCourseTemplete(courseTemplete);
             HashMap<String,CourseTemplete> map=new HashMap<>();
             map.put("courseinfo",courseTemplete);
@@ -64,7 +64,7 @@ public class CourseTempleteController {
     public ResultJSON updateCourse(@RequestBody @Valid CourseTemplete courseTemplete,@PathVariable Long id) {
         ResultJSON json = new ResultJSON();
         courseTemplete.setCreatetime(new Timestamp(System.currentTimeMillis()));
-        courseTemplete.setCreatedby(UserContext.getCurrent());
+//        courseTemplete.setCreatedby(UserContext.getCurrent());
         courseTempleteService.updateByCourseTemplete(courseTemplete);
         HashMap<String,CourseTemplete> map=new HashMap<>();
         map.put("courseTempleteinfo",courseTemplete);

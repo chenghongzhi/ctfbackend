@@ -12,7 +12,7 @@ public interface ImagelocalDao {
 
     @Delete("delete from imagelocal where id = #{id}")
     void deleteById(Long id);
-    @Insert("insert into imagelocal (iname, size, ports,createdtime, idescribe, imageid)values (#{iname,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}, #{ports,jdbcType=VARCHAR},#{createdtime,jdbcType=TIMESTAMP}, #{idescribe,jdbcType=VARCHAR}, #{imageid,jdbcType=VARCHAR})")
+    @Insert("insert into imagelocal (iname, size, ports,createdtime, idescribe, imageid,account,passwd)values (#{iname,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}, #{ports,jdbcType=VARCHAR},#{createdtime,jdbcType=TIMESTAMP}, #{idescribe,jdbcType=VARCHAR}, #{imageid,jdbcType=VARCHAR},#{account,jdbcType=VARCHAR},#{passwd,jdbcType=VARCHAR})")
     void insert(Imagelocal imagelocal);
 
     @Select("select * from imagelocal where id = #{id,jdbcType=BIGINT}")

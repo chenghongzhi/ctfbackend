@@ -14,11 +14,21 @@ public class CourseTemplete {
 
     private String cdescribe;
 
-    private String img;
+    private String key;
 
-    private String createdby;
+    private String type;
 
     private List<Imagelocal> imagelocals;
+
+    private String relateUrl;
+
+    public String getRelateUrl() {
+        return relateUrl;
+    }
+
+    public void setRelateUrl(String relateUrl) {
+        this.relateUrl = relateUrl;
+    }
 
     public Long getId() {
         return id;
@@ -52,27 +62,27 @@ public class CourseTemplete {
         this.cdescribe = cdescribe;
     }
 
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public String getCreatedby() {
-        return createdby;
-    }
-
-    public void setCreatedby(String createdby) {
-        this.createdby = createdby;
-    }
-
     public List<Imagelocal> getImagelocals() {
         return imagelocals;
     }
 
     public void setImagelocals(List<Imagelocal> imagelocals) {
         this.imagelocals = imagelocals;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

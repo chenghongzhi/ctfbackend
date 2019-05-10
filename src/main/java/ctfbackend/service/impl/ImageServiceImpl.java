@@ -38,6 +38,8 @@ public class ImageServiceImpl implements ImageService {
     public List<Imagelocal> list() {
         return imagelocalMapper.listAll();
     }
+
+    @Override
     public List<Imagelocal> listByPage(int start, int prePageRecords) {
         return imagelocalMapper.listAllByPage(start,prePageRecords);
     }
